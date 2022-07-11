@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{{ page.title }}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>{% include style.css %}</style>
+  <meta name="twitter:site" content="{{ site.twitter_handle }}">
+  <meta name="twitter:creator" content="{{ page.twitter_handle }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:description" content="{{ page.excerpt }}">
+  <meta property="og:image" content="{{ page.social_media_img }}">
+  <meta property="og:image:alt" content="{{ page.excerpt }}">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:type" content="object">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:description" content="{{ page.excerpt }}">
+</head>
+<body>
+{% include breadcrumbs.html %}
+<hr>
+<!--<img src="https://martinpallmann.de/mockbridge/gfx/logo.svg" alt="MockBridge" style="height: 36px; width: 200px;">-->
+<!--<hr>-->
+{{ content }}
+</body>
+</html>

@@ -9,15 +9,15 @@
   <meta name="twitter:creator" content="{{ page.twitter_handle }}">{% elsif site.twitter_handle %}
   <meta name="twitter:creator" content="{{ site.twitter_handle }}">{% endif %}
   <meta name="twitter:card" content="summary_large_image">{% if page.title %}
-  <meta name="twitter:title" content="{{ page.title }}">{% endif %}{% if page.excerpt %}
-  <meta name="twitter:description" content="{{ page.excerpt }}">{% endif %}{% if page.social_media_img %}
-  <meta property="og:image" content="{{ page.social_media_img }}">{% endif %}{% if page.excerpt %}
-  <meta property="og:image:alt" content="{{ page.excerpt }}">{% endif %}{% if site.name %}
+  <meta name="twitter:title" content="{{ page.title }}">{% endif %}{% if site.name %}
   <meta property="og:site_name" content="{{ site.name }}">{% endif %}
   <meta property="og:type" content="object">{% if page.title %}
   <meta property="og:title" content="{{ page.title }}">{% endif %}
-  <meta property="og:url" content="{{ page.url | absolute_url }}">{% if page.excerpt %}
-  <meta property="og:description" content="{{ page.excerpt }}">{% endif %}
+  <meta property="og:url" content="{{ page.url | absolute_url }}">{% if page.social_media_img %}
+  <meta property="og:image" content="{{ page.social_media_img }}">{% endif %}{% if page.description %}
+  <meta property="og:image:alt" content="{{ page.description }}">
+  <meta property="og:description" content="{{ page.description }}">
+  <meta name="twitter:description" content="{{ page.description }}">{% endif %}
 </head>
 <body>
 {% include breadcrumbs.html %}

@@ -22,8 +22,16 @@
 <body>
 {% include breadcrumbs.html %}
 <hr>
-<!--<img src="https://martinpallmann.de/mockbridge/gfx/logo.svg" alt="MockBridge" style="height: 36px; width: 200px;">-->
-<!--<hr>-->
+{% if site.logo.url %}
+  {% assign style = "" %}
+  {% if site.logo.height %}
+    {% capture style %}{{ style }}height:{{ site.logo.height }};{% endcapture %}
+  {% endif %}
+  {% if site.logo.width %}
+    {% capture style %}{{ style }}width:{{ site.logo.width }};{% endcapture %}
+  {% endif %}
+  <img src="{{ site.logo.url }}" alt="{{ site.logo.alt }}" style="{{ style }}">
+{% endif %}
 {{ content }}
 </body>
 </html>

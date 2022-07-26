@@ -30,6 +30,7 @@
   {% if site.logo.width %}
     {% capture style %}{{ style }}width:{{ site.logo.width }};{% endcapture %}
   {% endif %}
+  <br>
   <img src="{{ site.logo.url }}" alt="{{ site.logo.alt }}" style="{{ style }}">
 {% endif %}
 {{ content }}
